@@ -15,10 +15,10 @@
   new_window: false
   highlight: false
 - name: Login
-  link: /
+  link: /signup/
   new_window: false
   highlight: false
 - name: Sign Up
-  link: /
+  link: /signup/
   new_window: false
   highlight: true

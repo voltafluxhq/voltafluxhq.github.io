@@ -55,6 +55,17 @@ header {
 	position: relative;
 }
 
+.warning {
+	background: $brand-color;
+	p {
+	  @include colorize;
+	  strong {
+		@include colorize;
+	  }
+	}
+  }
+  
+
 .screenshot{
 	max-width: 100%;
 	height: auto;
