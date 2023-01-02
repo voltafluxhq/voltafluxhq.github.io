@@ -4,12 +4,16 @@ heading: Get in touch today
 description: We'd love to help you learn.
 
 map:
-  latitude: 55.860916
-  longitude: -4.251433
-  address: "Glasgow, Scotland, United Kingdom."
-  zoom: 13
+latitude: 55.860916
+longitude: -4.251433
+address: "Glasgow, Scotland, United Kingdom."
+zoom: 13
 ---
-<div class="map" id="map"></div>
+<!-- <div class="map" id="map"></div> -->
+
+<div class="text-container">
+	<img src="{{ site.baseurl }}/images/board-room.jpg" />
+</div>
 
 
 <div class="contact-box">
@@ -30,8 +34,12 @@ map:
 	</form>
 
 	<div class="contact-details">
+		<!-- <h3 class="editable">Address</h3>
+		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{
+				page.map.address | replace: ", ", ", <br>" }}</a></address> -->
+
 		<h3 class="editable">Address</h3>
-		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+		<p><a href="https://goo.gl/maps/c5sVbH6VN1WdFX4GA" target="_blank">Glasgow, Scotland, United Kingdom.</a></p>
 
 		<h3 class="editable">Email</h3>
 		<p><a href="mailto:hello@voltaflux.com">hello@voltaflux.com</a></p>
@@ -175,4 +183,5 @@ map:
 		});
 	}
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
