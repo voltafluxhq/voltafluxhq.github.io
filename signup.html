@@ -16,8 +16,9 @@ permalink: /signup/
         </div>
     </div>
     <div class="contact-box">
-        <form accept-charset="UTF-8" action="https://getform.io/{YOUR_UNIQUE_FORM_ENDPOINT}" method="POST"
-            enctype="multipart/form-data" target="_blank">
+        <form accept-charset="UTF-8" id="signupform"
+            action="https://script.google.com/macros/s/AKfycbwgCqdTNNrqYTH9mtYmQUSlqqvAj5lUeDbXnOXkoBx0nSIwyIoQUkRvQrmOz49gn5e98g/exec"
+            method="POST" enctype="multipart/form-data" target="_blank">
             <div class="form-group">
                 <label for="exampleInputEmail1" required="required">Email address</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1"
@@ -32,4 +33,21 @@ permalink: /signup/
             <input type="submit" value="Join" />
     </div>
     </form>
+    <script>
+        window.addEventListener("load", function () {
+            const form = document.getElementById('signupform');
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        alert("Thanks!");
+                    })
+            });
+        });
+    </script>
 </section>

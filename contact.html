@@ -18,8 +18,10 @@ zoom: 13
 
 
 <div class="contact-box">
-	<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-		<input type="hidden" name="_to" value="hello@voltaflux.com" />
+	<form
+		action="https://script.google.com/macros/s/AKfycbwgCqdTNNrqYTH9mtYmQUSlqqvAj5lUeDbXnOXkoBx0nSIwyIoQUkRvQrmOz49gn5e98g/exec"
+		method="post" class="contact-form" id="contactform">
+		<input type="hidden" name="_to" value="{{ site.baseurl }}/contact-success/" />
 		<input type="text" name="_gotcha" style="display: none;">
 
 		<label for="name">Full Name</label>
@@ -33,6 +35,23 @@ zoom: 13
 
 		<input type="submit" value="Send Message" />
 	</form>
+	<script>
+		window.addEventListener("load", function () {
+			const form = document.getElementById('contactform');
+			form.addEventListener("submit", function (e) {
+				e.preventDefault();
+				const data = new FormData(form);
+				const action = e.target.action;
+				fetch(action, {
+					method: 'POST',
+					body: data,
+				})
+					.then(() => {
+						alert("Thanks!");
+					})
+			});
+		});
+	</script>
 
 	<div class="contact-details">
 		<!-- <h3 class="editable">Address</h3>
@@ -43,7 +62,7 @@ zoom: 13
 		<p><a href="https://goo.gl/maps/c5sVbH6VN1WdFX4GA" target="_blank">Glasgow, Scotland, United Kingdom.</a></p>
 
 		<h3 class="editable">Email</h3>
-		<p><a href="mailto:hello@voltaflux.com">hello@voltaflux.com</a></p>
+		<p><a href="mailto:hello@voltaflux.com">skillset@voltaflux.com</a></p>
 	</div>
 </div>
 
