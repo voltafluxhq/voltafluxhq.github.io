@@ -42,6 +42,17 @@
 	}
 }
 
+.hero-login {
+	color: #ffffff;
+	text-align: center;
+	background: linear-gradient(to bottom, $middle-gradient-color 0%, $secondary-brand-color 100%) no-repeat #a05fb7;
+	padding-top: 25px;
+
+	p {
+		color: #fff;
+	}
+}
+
 @media #{$desktop} {
 	.flex {
 		@include flexbox;
