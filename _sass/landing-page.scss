@@ -23,10 +23,10 @@
 		@media #{$tablet} {
 			@include flexbox;
 
-			blockquote {
-				-webkit-flex: 1;
-				flex: 1;
-			}
+			// blockquote {
+			// 	-webkit-flex: 1;
+			// 	flex: 1;
+			// }
 		}
 	}
 }

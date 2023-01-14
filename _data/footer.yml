@@ -13,11 +13,11 @@
   - name: Sign Up
     link: /signup/
     new_window: false
-  - name: Pricing
-    link: /pricing/
-  # - name: Status
-  #   link: /
-  #   new_window: true
+  # - name: Pricing
+  #   link: /pricing/
+  - name: Status
+    link: /
+    new_window: false
 - links:
   - name: Facebook
     link: https://facebook.com/voltaflux/
