@@ -20,11 +20,11 @@
     new_window: false
 - links:
   - name: Facebook
-    link: https://facebook.com/voltaflux/
+    link: https://facebook.com/SkillSetVF/
     new_window: true
     social_icon: Facebook
   - name: Twitter
-    link: https://twitter.com/voltaflux
+    link: https://twitter.com/SkillSetVF
     social_icon: Twitter
     new_window: true
   - name: YouTube
